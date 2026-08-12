@@ -1,0 +1,1892 @@
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: min(90%, var(--container-width));
+    margin: auto;
+}
+
+section {
+    padding: var(--section-spacing) 0;
+}
+
+
+/* ==================================================
+   TITRES DE SECTION
+================================================== */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.section-title h2 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.header {
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+}
+
+.logo h1 {
+    color: var(--primary);
+    font-size: 1.6rem;
+    margin-bottom: 2px;
+}
+
+.logo span {
+    color: var(--text-light);
+    font-size: 0.8rem;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 36px;
+}
+
+.nav-menu a {
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--primary);
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+    min-height: calc(100vh - 85px);
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.hero-intro {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.hero h3 {
+    font-size: 2rem;
+    color: var(--text-light);
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-photo {
+    width: 400px;
+    height: 500px;
+
+    margin-left: auto;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow-md);
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center top;
+}
+
+
+/* ==================================================
+   BUTTONS
+================================================== */
+
+.btn {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.btn-secondary {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-secondary:hover {
+    background: var(--primary);
+    color: white;
+}
+
+
+/* ==================================================
+   ABOUT
+================================================== */
+
+.about {
+    background: white;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.about-content p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+.card h3 {
+    margin-bottom: 18px;
+    color: var(--primary);
+}
+
+.card p {
+    color: var(--text-light);
+}
+
+
+/* ==================================================
+   SKILLS
+================================================== */
+
+.skills {
+    background: var(--background);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.skills .card {
+    min-height: 260px;
+}
+
+.skills ul {
+    margin-top: 20px;
+}
+
+.skills li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 14px;
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.skills li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+
+/* ==================================================
+   WESTO QG CONNECTED
+================================================== */
+
+.project {
+    background: white;
+}
+
+
+/* ==================================================
+   STRUCTURE DES CHAPITRES
+================================================== */
+
+.case-study-chapter {
+    padding: 100px 0;
+    border-top: 1px solid var(--border);
+}
+
+.chapter-number {
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.chapter-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.chapter-heading {
+    margin-bottom: 45px;
+}
+
+.chapter-label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.chapter-heading h3 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.chapter-lead {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    max-width: 800px;
+}
+
+
+/* ==================================================
+   CHAPITRE 01 — CONTEXTE
+================================================== */
+
+.project-intro {
+    width: 100%;
+    margin: 0 0 50px;
+}
+
+.project-intro h4 {
+    font-size: 1.6rem;
+    color: var(--text);
+    margin-bottom: 18px;
+}
+
+.project-intro p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.project-intro p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==================================================
+   CHAPITRE 01 — LE DÉFI
+================================================== */
+
+.project-highlight {
+    width: 100%;
+    margin: 0;
+    padding: 40px;
+    background: var(--background);
+    border-left: 6px solid var(--primary);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+}
+
+.project-highlight h4 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    color: var(--primary);
+}
+
+.project-highlight ul {
+    display: grid;
+    gap: 15px;
+}
+
+.project-highlight li {
+    position: relative;
+    padding-left: 30px;
+    font-size: 1.05rem;
+}
+
+.project-highlight li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* ==================================================
+   WESTO QG — CHAPITRE 02
+================================================== */
+
+.objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.objective-card {
+    padding: 35px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: 0.3s;
+}
+
+.objective-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+.objective-icon {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.objective-card h4 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.objective-card p {
+    color: var(--text-light);
+}
+
+/* ==================================================
+   WESTO QG — CHAPITRE 03
+================================================== */
+
+.solution-intro {
+    max-width: 850px;
+    margin-bottom: 50px;
+}
+
+.solution-intro p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.solution-intro p:last-child {
+    margin-bottom: 0;
+}
+
+.solution-principles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.solution-card {
+    padding: 30px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: 0.3s;
+}
+
+.solution-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+.solution-icon {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.solution-card h4 {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+.solution-card p {
+    color: var(--text-light);
+}
+
+.solution-note {
+    margin-top: 40px;
+    padding: 25px 30px;
+    background: var(--background);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 12px 12px 0;
+}
+
+.solution-note strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+.solution-note p {
+    color: var(--text-light);
+}
+
+/* ==================================================
+   WESTO QG — CHAPITRE 04
+================================================== */
+
+.infrastructure-intro {
+    max-width: 850px;
+    margin-bottom: 50px;
+}
+
+.infrastructure-intro p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.infrastructure-intro p:last-child {
+    margin-bottom: 0;
+}
+
+.infrastructure-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.infrastructure-card {
+    padding: 30px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: 0.3s;
+}
+
+.infrastructure-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+.infrastructure-icon {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.infrastructure-card h4 {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+.infrastructure-card p {
+    color: var(--text-light);
+}
+
+.infrastructure-principle {
+    margin-top: 40px;
+    padding: 25px 30px;
+    background: var(--background);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 12px 12px 0;
+}
+
+.infrastructure-principle strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+.infrastructure-principle p {
+    color: var(--text-light);
+}
+
+/* ==================================================
+   WESTO QG — CHAPITRE 05
+================================================== */
+
+.automation-intro {
+    max-width: 850px;
+    margin-bottom: 50px;
+}
+
+.automation-intro p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.automation-intro p:last-child {
+    margin-bottom: 0;
+}
+
+.automation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.automation-card {
+    padding: 30px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: 0.3s;
+}
+
+.automation-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+.automation-icon {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.automation-card h4 {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+.automation-card p {
+    color: var(--text-light);
+}
+
+.automation-principle {
+    margin-top: 40px;
+    padding: 25px 30px;
+    background: var(--background);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 12px 12px 0;
+}
+
+.automation-principle strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+.automation-principle p {
+    color: var(--text-light);
+}
+
+/* ==================================================
+   WESTO QG — CHAPITRE 06
+================================================== */
+
+.results-intro {
+    max-width: 850px;
+    margin-bottom: 50px;
+}
+
+.results-intro p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.results-intro p:last-child {
+    margin-bottom: 0;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.result-card {
+    padding: 30px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: 0.3s;
+}
+
+.result-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+.result-icon {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.result-card h4 {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+.result-card p {
+    color: var(--text-light);
+}
+
+.results-highlight {
+    margin-top: 40px;
+    padding: 25px 30px;
+    background: var(--background);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 12px 12px 0;
+}
+
+.results-highlight strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+.results-highlight p {
+    color: var(--text-light);
+}
+
+/* ==================================================
+   WESTO QG — CHAPITRE 07
+================================================== */
+
+.lessons-intro {
+    max-width: 850px;
+    margin-bottom: 50px;
+}
+
+.lessons-intro p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.lessons-intro p:last-child {
+    margin-bottom: 0;
+}
+
+.lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.lesson-card {
+    padding: 30px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: 0.3s;
+}
+
+.lesson-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+.lesson-icon {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.lesson-card h4 {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+.lesson-card p {
+    color: var(--text-light);
+}
+
+.lessons-conclusion {
+    margin-top: 40px;
+    padding: 25px 30px;
+    background: var(--background);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 12px 12px 0;
+}
+
+.lessons-conclusion strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+.lessons-conclusion p {
+    color: var(--text-light);
+}
+
+/* ==================================================
+   GALERIE DE PREUVES
+================================================== */
+
+.evidence-gallery {
+    padding: 100px 0;
+    border-top: 1px solid var(--border);
+}
+
+.gallery-heading {
+    margin-bottom: 70px;
+}
+
+.gallery-heading h3 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.gallery-lead {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    max-width: 800px;
+}
+
+.evidence-category {
+    margin-bottom: 70px;
+}
+
+.evidence-category-heading {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.evidence-category-heading span {
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.evidence-category-heading h4 {
+    font-size: 1.6rem;
+}
+
+.evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.evidence-card {
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: 0.3s;
+}
+
+.evidence-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+.evidence-placeholder {
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background);
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.evidence-info {
+    padding: 25px;
+}
+
+.evidence-info h5 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.evidence-info p {
+    color: var(--text-light);
+}
+
+.gallery-note {
+    margin-top: 20px;
+    padding: 25px 30px;
+    background: var(--background);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 12px 12px 0;
+}
+
+.gallery-note strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+.gallery-note p {
+    color: var(--text-light);
+}
+
+/* ==================================================
+   MENU PROJET — SOUS-MENU
+================================================== */
+
+.nav-dropdown {
+    position: relative;
+}
+
+.dropdown-arrow {
+    margin-left: 5px;
+    font-size: 0.75rem;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 15px);
+    right: 0;
+
+    min-width: 300px;
+
+    padding: 12px 0;
+
+    background: var(--surface);
+
+    border-radius: 12px;
+
+    box-shadow: var(--shadow-md);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-8px);
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.25s ease;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    display: block;
+
+    padding: 10px 20px;
+
+    font-size: 0.9rem;
+
+    font-weight: 500;
+
+    color: var(--text);
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+    background: var(--background);
+    color: var(--primary);
+}
+
+.case-study-chapter,
+.evidence-gallery {
+    scroll-margin-top: 100px;
+}
+
+/* ==================================================
+   SOUS-MENU DES RÉALISATIONS
+================================================== */
+
+.nav-submenu {
+    position: relative;
+}
+
+.nav-submenu > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.submenu-arrow {
+    font-size: 0.75rem;
+    transition: 0.3s;
+}
+
+/* Sous-menu caché par défaut */
+
+.submenu-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 260px;
+
+    background: var(--surface);
+    box-shadow: var(--shadow-md);
+    border-radius: 12px;
+
+    padding: 10px 0;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(10px);
+
+    transition: 0.3s;
+    z-index: 1100;
+}
+
+/* Affichage du sous-menu */
+
+.nav-submenu:hover > .submenu-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* Liens du sous-menu */
+
+.submenu-menu li {
+    width: 100%;
+}
+
+.submenu-menu a {
+    display: block;
+    padding: 10px 18px;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.submenu-menu a:hover {
+    background: var(--background);
+    color: var(--primary);
+}
+
+/* Flèche vers la droite */
+
+.nav-submenu:hover > a .submenu-arrow {
+    transform: translateX(3px);
+}
+
+
+
+/* ==================================================
+   EXPÉRIENCE PROFESSIONNELLE
+================================================== */
+
+.experience {
+    background: var(--background);
+}
+
+.experience-chapter {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 40px;
+
+    max-width: 1000px;
+    margin: 0 auto 80px;
+
+    padding-bottom: 80px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.experience-chapter:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.experience-number {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--primary);
+}
+
+.experience-content {
+    max-width: 850px;
+}
+
+.experience-label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.experience-content h3 {
+    font-size: 2.3rem;
+    margin-bottom: 40px;
+}
+
+.experience-block {
+    margin-bottom: 40px;
+}
+
+.experience-block h4,
+.experience-skills h4 {
+    font-size: 1.25rem;
+    margin-bottom: 18px;
+}
+
+.experience-block p {
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+}
+
+.experience-block p:last-child {
+    margin-bottom: 0;
+}
+
+.experience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.experience-tags span {
+    padding: 9px 16px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 999px;
+
+    color: var(--text-light);
+
+    font-size: 0.9rem;
+}
+
+.experience-transition {
+    padding-top: 20px;
+}
+
+.transition-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 30px;
+
+    margin-top: 25px;
+}
+
+.transition-list li {
+    position: relative;
+    padding-left: 25px;
+    color: var(--text-light);
+}
+
+.transition-list li::before {
+    content: "✓";
+
+    position: absolute;
+    left: 0;
+
+    color: var(--primary);
+
+    font-weight: 700;
+}
+
+/* ==================================================
+   FORMATION & CERTIFICATIONS
+================================================== */
+
+.education {
+    background: white;
+}
+
+.education-group {
+    max-width: 1000px;
+    margin: 0 auto 70px;
+}
+
+.education-group:last-child {
+    margin-bottom: 0;
+}
+
+.education-group-title {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.education-group-title span {
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.education-group-title h3 {
+    font-size: 1.6rem;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.education-card {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 25px;
+
+    padding: 30px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    box-shadow: var(--shadow-sm);
+
+    transition: 0.3s;
+}
+
+.education-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+.education-year {
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.education-label {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.education-content h4 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.education-content p:last-child {
+    color: var(--text-light);
+}
+
+/* ==================================================
+   FORMATION — CERTIFICATS
+================================================== */
+
+.education-grid-single {
+    grid-template-columns: 1fr;
+}
+
+.certificate-card {
+    overflow: hidden;
+    padding: 0;
+}
+
+.certificate-image-link {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background: var(--background);
+}
+
+.certificate-image-link img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    padding: 20px;
+    transition: transform 0.35s ease;
+}
+
+.certificate-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(15, 23, 42, 0.72);
+
+    color: white;
+    font-weight: 600;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+.certificate-image-link:hover img {
+    transform: scale(1.03);
+}
+
+.certificate-image-link:hover .certificate-overlay {
+    opacity: 1;
+}
+
+.certificate-card .education-content {
+    padding: 28px 30px 30px;
+}
+
+.certificate-card .education-content h4 {
+    margin-bottom: 10px;
+}
+
+.certificate-link {
+    display: inline-block;
+    margin-top: 18px;
+
+    color: var(--primary);
+
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.certificate-link:hover {
+    color: var(--primary-dark);
+}
+
+/* ==================================================
+   CONTACT
+================================================== */
+
+.contact {
+    background: var(--background);
+}
+
+.contact-content {
+    max-width: 950px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+
+    align-items: start;
+}
+
+.contact-intro h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.contact-intro p {
+    color: var(--text-light);
+    font-size: 1.05rem;
+}
+
+.contact-links {
+    display: grid;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    padding: 20px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    box-shadow: var(--shadow-sm);
+
+    transition: 0.3s;
+}
+
+.contact-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    color: var(--primary);
+}
+
+.contact-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--background);
+
+    color: var(--primary);
+
+    font-weight: 700;
+}
+
+.contact-item strong {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.contact-item div span {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.whatsapp-icon svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+}
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.footer {
+    background: var(--text);
+    color: white;
+    padding: 50px 0 25px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding-bottom: 35px;
+}
+
+.footer-brand h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.footer-brand p {
+    color: #CBD5E1;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.footer-links a {
+    color: #CBD5E1;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    color: #94A3B8;
+    font-size: 0.85rem;
+}
+
+.footer-bottom a {
+    color: #CBD5E1;
+}
+
+.footer-bottom a:hover {
+    color: white;
+}
+
+/* ==================================================
+   GALERIE DE PREUVES — IMAGES
+================================================== */
+
+.proof-image-link {
+    display: flex;
+    width: 100%;
+    height: 260px;
+    background: #F8FAFC;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.proof-image-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.proof-content {
+    padding: 28px;
+    background: #FFFFFF;
+}
+
+.proof-content h3 {
+    margin-bottom: 14px;
+}
+
+.proof-content p {
+    margin: 0;
+}
+
+
+/* ==================================================
+   V2 — RECRUITER-FOCUSED POLISH
+================================================== */
+
+.section-kicker {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--primary);
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.hero-proof {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    margin: -18px 0 34px;
+    color: var(--text-light);
+    font-size: .92rem;
+    font-weight: 600;
+}
+
+.hero-proof span {
+    white-space: nowrap;
+}
+
+.case-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-top: 35px;
+    text-align: left;
+}
+
+.case-summary > div {
+    padding: 20px;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.case-summary strong {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--primary);
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+.case-summary span {
+    display: block;
+    color: var(--text-light);
+    font-size: .92rem;
+    line-height: 1.5;
+}
+
+/* Make proof galleries feel like evidence, not decoration */
+.evidence-grid img,
+.gallery-grid img {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+/* Small recruiter-facing emphasis */
+.about-content strong {
+    color: var(--text);
+}
+
+.contact-note {
+    display: block;
+    color: var(--text-light);
+    font-size: .82rem;
+    margin-top: 2px;
+}
+
+.contact-item > div > span:not(.contact-note) {
+    color: var(--text-light);
+}
+
+/* ==================================================
+   V4 — IDENTITÉ VISUELLE LÉGÈRE
+   Décorations simples, professionnelles et discrètes
+================================================== */
+
+:root {
+    --header-gradient: linear-gradient(90deg, var(--primary), var(--accent));
+    --soft-accent: rgba(37, 99, 235, .07);
+    --soft-cyan: rgba(6, 182, 212, .06);
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Fine ligne colorée en haut de page */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--header-gradient);
+    z-index: 2000;
+}
+
+/* Header légèrement coloré sans perdre son aspect sobre */
+.header {
+    background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(248,250,252,.96));
+    border-bottom: 1px solid rgba(37, 99, 235, .10);
+}
+
+.header::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, rgba(37,99,235,.22), rgba(6,182,212,.18), transparent);
+}
+
+.logo {
+    position: relative;
+    padding-left: 13px;
+}
+
+.logo::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 3px;
+    border-radius: 4px;
+    background: var(--header-gradient);
+}
+
+.logo h1 {
+    background: var(--header-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-menu > li > a {
+    position: relative;
+    padding: 8px 0;
+}
+
+.nav-menu > li > a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 2px;
+    height: 2px;
+    border-radius: 3px;
+    background: var(--header-gradient);
+    transition: right .25s ease;
+}
+
+.nav-menu > li > a:hover::after {
+    right: 0;
+}
+
+/* Hero : touches visuelles très discrètes */
+.hero {
+    position: relative;
+    isolation: isolate;
+    background:
+        radial-gradient(circle at 88% 22%, var(--soft-cyan) 0, transparent 28%),
+        radial-gradient(circle at 8% 78%, var(--soft-accent) 0, transparent 24%);
+}
+
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.hero::before {
+    width: 150px;
+    height: 150px;
+    right: 4%;
+    top: 12%;
+    border: 1px solid rgba(37,99,235,.10);
+}
+
+.hero::after {
+    width: 80px;
+    height: 80px;
+    left: 4%;
+    bottom: 12%;
+    border: 1px solid rgba(6,182,212,.13);
+}
+
+.hero-photo {
+    position: relative;
+    border: 1px solid rgba(37,99,235,.12);
+}
+
+.hero-photo::after {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 1px solid rgba(255,255,255,.32);
+    border-radius: 18px;
+    pointer-events: none;
+}
+
+/* Séparateur décoratif avant chaque grande section */
+section:not(.hero) {
+    position: relative;
+}
+
+section:not(.hero)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 46px;
+    height: 3px;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    background: var(--header-gradient);
+    opacity: .72;
+}
+
+/* Titres de section : petit accent graphique */
+.section-title h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2::after {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 3px;
+    margin: 12px auto 0;
+    border-radius: 4px;
+    background: var(--header-gradient);
+}
+
+/* Cartes : relief léger et interaction sobre */
+.card,
+.skill-card,
+.case-card,
+.about-card,
+.project-card,
+.experience-card,
+.education-card,
+.proof-card {
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.card:hover,
+.skill-card:hover,
+.case-card:hover,
+.about-card:hover,
+.project-card:hover,
+.experience-card:hover,
+.education-card:hover,
+.proof-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(37,99,235,.16);
+}
+
+/* Mise en valeur légère des éléments importants */
+.case-summary,
+.hero-proof {
+    position: relative;
+}
+
+.case-summary::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -10px;
+    width: 90px;
+    height: 1px;
+    background: linear-gradient(90deg, var(--primary), transparent);
+}
+
+/* Boutons avec accent plus premium */
+.btn-primary {
+    background: var(--header-gradient);
+    box-shadow: 0 8px 20px rgba(37,99,235,.16);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+    transform: translateY(-2px);
+}
+
+.btn-secondary:hover {
+    background: var(--primary);
+    box-shadow: 0 8px 20px rgba(37,99,235,.12);
+}
+
+/* Retour discret vers le haut */
+#top::after {
+    content: "";
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: 7px;
+    height: 42px;
+    border-radius: 8px;
+    background: linear-gradient(180deg, var(--primary), var(--accent));
+    opacity: .18;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .hero::before {
+        width: 100px;
+        height: 100px;
+        right: -20px;
+    }
+
+    .hero::after {
+        width: 55px;
+        height: 55px;
+        left: -15px;
+    }
+}

@@ -1,0 +1,39 @@
+/* ==========================================
+   Portfolio V1 - Variables Globales
+   ========================================== */
+
+:root {
+
+    /* ===== Couleurs ===== */
+
+    --primary: #2563EB;
+    --primary-dark: #1E3A8A;
+    --accent: #06B6D4;
+
+    --background: #F8FAFC;
+    --surface: #FFFFFF;
+
+    --text: #0F172A;
+    --text-light: #64748B;
+
+    --border: #E2E8F0;
+
+    /* ===== Ombres ===== */
+
+    --shadow-sm: 0 2px 8px rgba(0,0,0,.05);
+    --shadow-md: 0 8px 30px rgba(0,0,0,.08);
+    --shadow-lg: 0 20px 50px rgba(0,0,0,.12);
+
+    /* ===== Bordures ===== */
+
+    --radius: 16px;
+
+    /* ===== Largeur ===== */
+
+    --container-width: 1200px;
+
+    /* ===== Espacement ===== */
+
+    --section-spacing: 120px;
+
+}
