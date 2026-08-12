@@ -1890,3 +1890,64 @@ section:not(.hero)::before {
         left: -15px;
     }
 }
+
+/* ==================================================
+   AJUSTEMENT V4 — ÉCHELLE VISUELLE
+   Réduction légère de l'affichage desktop
+================================================== */
+
+@media (min-width: 769px) {
+
+    /* Titres principaux */
+    .hero h2 {
+        font-size: 3.5rem;
+    }
+
+    .hero h3 {
+        font-size: 1.8rem;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+    }
+
+    /* Titres de sections */
+    .section-title h2 {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        margin-bottom: 55px;
+    }
+
+    /* Chapitres */
+    .chapter-heading {
+        display: flex;
+        align-items: baseline;
+        gap: 14px;
+        margin-bottom: 35px;
+    }
+
+    .chapter-number {
+        font-size: 0.85rem;
+        line-height: 1;
+        margin-bottom: 0;
+        flex-shrink: 0;
+        color: var(--primary);
+    }
+
+    .chapter-heading h3 {
+        font-size: 2.3rem;
+        margin-bottom: 0;
+    }
+
+    /* Espacement général */
+    .case-study-chapter {
+        padding: 80px 0;
+    }
+
+    .evidence-gallery {
+        padding: 80px 0;
+    }
+
+}
